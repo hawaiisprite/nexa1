@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %5p [%c] %m%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+    
+   		<!--  전자정부 -->
+        <Logger name="egovframework" level="INFO" additivity="false">
+            <AppenderRef ref="console" />
+        </Logger>
+        <Logger name="org.egovframe" level="INFO" additivity="false">
+            <AppenderRef ref="console" />
+        </Logger>
+        
+        <Logger name="org.springframework" level="INFO" additivity="false">
+            <AppenderRef ref="console" />
+        </Logger>
+    
+    
+ 		  <!--  SQL -->
+     
+     	
+     
+        <Logger name="java.sql" level="ERROR" additivity="false">
+            <AppenderRef ref="console" />
+        </Logger>
+        
+        <Logger name="jdbc.sqlonly" level="ERROR" additivity="false"> 
+            <AppenderRef ref="console" /> 
+        </Logger>
+ 
+ 
+ 	    <Logger name="jdbc.sqltiming" level="DEBUG" additivity="false">
+	        <AppenderRef ref="console" />
+	    </Logger>
+	    
+	    <Logger name="jdbc.audit" level="WARN" additivity="false">
+            <appender-ref ref="console"/>
+        </Logger>
+	    
+	    <Logger name="jdbc.resultset" level="WARN" additivity="false">
+           <appender-ref ref="console"/>
+        </Logger>
+         
+ 
+        <Logger name="jdbc.resultSettable" level="INFO" additivity="false">
+          <appender-ref ref="console"/>
+        </Logger>
+	    
+	    
+    
+ 
+        <!--  넥사크로 -->
+        
+        <Logger name="sample" level="DEBUG" additivity="false">
+            <AppenderRef ref="console" />
+        </Logger>
+        
+         <Logger name="com.nexacro" level="DEBUG" additivity="false">
+            <AppenderRef ref="console" />
+        </Logger>
+ 
+        <Root level="ERROR">
+            <AppenderRef ref="console" />
+        </Root>
+    </Loggers>
+</Configuration>
